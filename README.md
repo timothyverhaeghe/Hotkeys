@@ -1,0 +1,2 @@
+# hotkeys
+Lightweight hotkeys javascript
