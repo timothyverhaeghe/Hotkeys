@@ -13,4 +13,4 @@ hotkeys("ctrl+u", function(){
 ```
 
 ## Credits
-Copyright © 2016 Timothy Verhaeghe <timothy@taglayer.com>
+Copyright © 2016 Timothy Verhaeghe <<timothy@taglayer.com>>
