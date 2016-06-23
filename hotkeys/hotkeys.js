@@ -5,15 +5,16 @@
 
 var timeline = [];
 var hotkeysList = [];
+var inputs = {17:"CTRL", 18:"ALT", 9:"TAB", 16:"SHIFT",91: "CMD", 32:"SPACE",13:"ENTER", 8:"BACKSPACE" }; // numlock (144),
 
 var show = function(){
   console.log(timeline);
 }
 
 var hotkeys = function(hotkeyData, callback){
-  console.log('Hotkey added '+ hotkeyData);
-  hotkeysList.push(hotkeyData);
-  hotkeysList[hotkeyData] = callback;
+  var htky = hotkeyData.toUpperCase();
+  hotkeysList.push(htky);
+  hotkeysList[htky] = callback;
 }
 
 var listen = function(){
@@ -40,18 +41,20 @@ var listen = function(){
   }
 }
 
+// monitor the behavior of the mouse.
 document.addEventListener("mousedown", function(evt){
   var click = evt.buttons, t = "";
-  if(click == 1){ t = 'left'; }
-  if(click == 2){ t = 'right'; }
-  if(click == 3){ t = 'together'; }
-  if(click == 4){ t = 'scrolbar'; }
-  timeline.push("mouse_"+t);
+  if(click == 1){ t = 'LEFT'; }
+  if(click == 2){ t = 'RIGHT'; }
+  if(click == 3){ t = 'BOTH'; }
+  if(click == 4){ t = 'WHEEL'; }
+  timeline.push(t);
   listen();
 });
 
 document.onkeydown = function checkKey(e){
   e = e || window.event;
-  timeline.push(String.fromCharCode(e.keyCode));
+  var a = inputs[e.keyCode] || String.fromCharCode(e.keyCode);
+  timeline.push(a);
   listen();
 }

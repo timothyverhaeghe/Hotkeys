@@ -9,11 +9,40 @@
 <script src="../hotkeys/hotkeys.js?v=1"></script>
 <script type="text/javascript">
 hotkeys("A+U", function(){
-  alert('You pressed A and U');
+  console.log('You pressed A and U');
 });
 
 hotkeys("A+B", function(){
-  alert('You pressed A and B');
+  console.log('You pressed A and B');
+});
+
+hotkeys("a+1", function(){
+  console.log('You pressed A and 1');
+});
+
+hotkeys("space+p", function(){
+  console.log('You have pressed the copied code.');
+});
+
+hotkeys("ctrl+s", function(){
+  console.log('Will you save this webpage?');
+});
+
+hotkeys("ctrl+c", function(){
+  console.log('We do not allow you to copy text from our webpage.');
+});
+
+hotkeys("ctrl+v", function(){
+  console.log('You cannot paste here.');
+});
+
+hotkeys("left+v", function(){
+  console.log('You cannot paste here.');
+});
+
+hotkeys("ctrl+u", function(){
+  // console.log('Haha. Our sourcecode? Serious?');
+  console.log("Open the sourcecode");
 });
 </script>
 

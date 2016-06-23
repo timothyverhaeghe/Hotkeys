@@ -17,11 +17,15 @@ hotkeys("ctrl+u", function(){
 </script>
 ```
 
-## Predefined functions
-- sourceCode(callback) => if someone opens the sourcecode (in browser)
+## Input field
+- Keyboard: A - Z
+- Keyboard: 1 - 9
+- Keyboard: CTRL, ALT, TAB, SHIFT, CMD, SPACE, ENTER, BACKSPACE
+- Mouse: LEFT, RIGHT, BOTH, WHEEL
 
 ## Important
 - You cannot define multiple hotkeys-functions with the same hotkeys (only the last one will be activated);
+- We check for AB not for BA (sometimes trought the pressure it will be BA).
 
 ## Todo
 - HotkeysHtml
